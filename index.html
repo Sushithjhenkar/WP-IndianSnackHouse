@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Indian Snack House | Food Truck</title>
+    <title>Walking Potato | Indian Snack House</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +17,7 @@
       <nav class="nav">
         <a class="brand" href="#home">
           <span class="logo-img" role="img" aria-label="Indian Snack House logo"></span>
-          <span>Indian Snack House</span>
+          <span>Walking Potato -Indian Snack House</span>
         </a>
         <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
           <span></span>
@@ -37,12 +37,15 @@
 
     <main id="home">
       <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline poster preload="assets/images/hero-poster.jpg">
+          <source src="assets/videos/foodtruck.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
           <p class="eyebrow">Modern Indian Street Food</p>
           <h1>Bold flavors on wheels.</h1>
           <p class="lead">
-            This is a draft layout you can easily update later. Swap photos, edit text, and update
-            menu items by changing the content directly in the HTML.
+            Experience the vibrant flavors of India. From crispy samosas to tangy chaat, we bring authentic street food to your neighborhood
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#menu">Explore the Menu</a>
@@ -50,28 +53,28 @@
           </div>
           <div class="hero-badges">
             <div class="badge">
-              <span class="logo-img" role="img" aria-label="Indian Snack House logo"></span>
+              <img class="logo-img" src="assets/images/foodtruck.png" alt="Food Truck">
               <div>
                 <p class="badge-title">Food Truck Ready</p>
-                <p class="badge-text">Catering • Events • Pop-Ups</p>
+                <p class="badge-text">Fresh • Fast • Made Daily</p>
               </div>
             </div>
             <div class="badge">
-              <span class="badge-icon">⏱️</span>
+              <span class="badge-icon">🌶️</span>
               <div>
-                <p class="badge-title">Fast & Fresh</p>
-                <p class="badge-text">Cooked to order</p>
+                <p class="badge-title">Spice Your Way</p>
+                <p class="badge-text">Mild • Medium • Hot</p>
               </div>
             </div>
           </div>
         </div>
         <div class="hero-visual">
           <div class="hero-photo">
-            <p>Hero Photo Placeholder</p>
-            <small>Replace with a large food truck or food image.</small>
+            <p>Truck photo PLACE HOLDER</p>
+            <small> AFTER WRAPPING</small>
           </div>
           <div class="hero-card">
-            <span class="logo-img" role="img" aria-label="Indian Snack House logo"></span>
+            <img class="logo-img" src="assets/images/location.png" alt="location">
             <div>
               <p class="card-title">Find us this week</p>
               <p class="card-text">Updated schedule below ↓</p>
@@ -86,34 +89,112 @@
             <p class="eyebrow">Signature Menu</p>
             <h2>Snack favorites with a modern twist.</h2>
           </div>
-          <a class="button ghost" href="#order">Download Menu PDF</a>
+          <div class="menu-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="puffs">Puff & Pastries</button>
+            <button class="filter-btn" data-filter="momos">Momos</button>
+            <button class="filter-btn" data-filter="fritters">Fritters</button>
+            <button class="filter-btn" data-filter="chaat">Indian Chaat</button>
+            <button class="filter-btn" data-filter="sweets">Sweet Treats</button>
+          </div>
+          <a class="button ghost" href="assets/menu/WalkingPotatoMenu.pdf">Download Menu PDF</a>
         </div>
         <div class="menu-grid">
-          <article class="menu-card">
-            <span class="logo-img" role="img" aria-label="Indian Snack House logo"></span>
-            <h3>Masala Fries</h3>
-            <p>Hand-cut fries with chaat masala, herbs, and tangy sauce.</p>
-            <span>$8</span>
-          </article>
-          <article class="menu-card">
-            <span class="logo-img" role="img" aria-label="Indian Snack House logo"></span>
-            <h3>Bombay Sandwich</h3>
-            <p>Grilled potato, chutney, tomato, onion, and spiced butter.</p>
-            <span>$11</span>
-          </article>
-          <article class="menu-card">
-            <span class="logo-img" role="img" aria-label="Indian Snack House logo"></span>
-            <h3>Pani Puri Flight</h3>
-            <p>Six crisp shells with sweet, spicy, and mint waters.</p>
-            <span>$9</span>
-          </article>
-          <article class="menu-card">
-            <span class="logo-img" role="img" aria-label="Indian Snack House logo"></span>
-            <h3>Paneer Tikka Wrap</h3>
-            <p>Charred paneer, cucumber, onion, and creamy sauce.</p>
-            <span>$12</span>
-          </article>
-        </div>
+        <article class="menu-card" data-category="puffs">
+          <img class="menu-img" src="assets/images/pannerpuff.jpg" alt="Paneer Puff">
+          <h3>Paneer Puff</h3>
+          <div class="menu-meta">🟢 Veg • 🌶️ Mild</div>
+          <p>Flaky pastry filled with spiced Indian cheese, baked golden like a savory turnover.</p>
+          <span>$4</span>
+        </article>
+        <article class="menu-card" data-category="puffs">
+          <img class="menu-img" src="assets/images/eggpuff.jpg" alt="Egg Puff">
+          <h3>Egg Puff</h3>
+          <div class="menu-meta">🟡 Egg • 🌶️ Mild</div>
+          <p>Buttery puff pastry stuffed with a seasoned hard-boiled egg and mild spices.</p>
+          <span>$5</span>
+        </article>
+        <article class="menu-card" data-category="puffs">
+          <img class="menu-img" src="assets/images/chickenpuff.jpg" alt="Chicken Puff">
+          <h3>Chicken Puff</h3>
+          <div class="menu-meta">🔴 Non-Veg • 🌶️🌶️ Medium</div>
+          <p>Classic puff pastry packed with spiced chicken filling, crispy outside and juicy inside.</p>
+          <span>$5</span>
+        </article>
+        <article class="menu-card" data-category="chaat">
+          <img class="menu-img" src="assets/images/samosachat.png" alt="Samosa Chaat">
+          <h3>Samosa Chaat</h3>
+          <div class="menu-meta">🟢 Veg • 🌶️🌶️ Medium</div>
+          <p>Crushed samosa topped with chickpeas, yogurt, tangy sauces, and warm spices.</p>
+          <span>$5</span>
+        </article>
+        <article class="menu-card" data-category="chaat">
+          <img class="menu-img" src="assets/images/panipuri.png" alt="Pani Puri">
+          <h3>Pani Puri</h3>
+          <div class="menu-meta">🟢 Veg • 🌶️🌶️🌶️ Spicy</div>
+          <p>Crispy bite-size shells filled with potatoes and chickpeas, dipped in spicy mint water.</p>
+          <span>$6</span>
+        </article>
+        <article class="menu-card" data-category="chaat">
+          <img class="menu-img" src="assets/images/masalapuri.jpeg" alt="Masala Puri">
+          <h3>Masala Puri</h3>
+          <div class="menu-meta">🟢 Veg • 🌶️🌶️🌶️ Spicy</div>
+          <p>Crushed puris topped with spiced gravy, chickpeas, onions, and bold Indian flavors.</p>
+          <span>$6</span>
+        </article>
+        <article class="menu-card" data-category="momos">
+          <img class="menu-img" src="assets/images/vegmomos.jpg" alt="Vegetarian Momos">
+          <h3>Vegetarian Momos</h3>
+          <div class="menu-meta">🟢 Veg • 🌶️🌶️ Medium</div>
+          <p>Steamed dumplings filled with seasoned vegetables, served with spicy dipping sauce.</p>
+          <span>$5</span>
+        </article>
+        <article class="menu-card" data-category="momos">
+          <img class="menu-img" src="assets/images/chickenmomos.jpg" alt="Chicken Momos">
+          <h3>Chicken Momos</h3>
+          <div class="menu-meta">🔴 Non-Veg • 🌶️🌶️ Medium</div>
+          <p>Juicy steamed dumplings stuffed with spiced ground chicken.</p>
+          <span>$6</span>
+        </article>
+        <article class="menu-card" data-category="fritters">
+          <img class="menu-img" src="assets/images/classicbajji.jpg" alt="Classic Bajji">
+          <h3>Classic Bajji</h3>
+          <div class="menu-meta">🟢 Veg • 🌶️ Mild</div>
+          <p>Deep-fried vegetables coated in chickpea batter, crispy and comforting.</p>
+          <span>$5</span>
+        </article>
+        <article class="menu-card" data-category="fritters">
+          <img class="menu-img" src="assets/images/eggbajji.jpg" alt="Egg Bajji">
+          <h3>Egg Bajji</h3>
+          <div class="menu-meta">🟡 Egg • 🌶️🌶️ Medium</div>
+          <p>Hard-boiled egg slices dipped in spiced batter and fried until golden.</p>
+          <span>$5</span>
+        </article>
+        <article class="menu-card" data-category="fritters">
+          <img class="menu-img" src="assets/images/stuffedbajji.jpg" alt="Stuffed Bajji">
+          <h3>Cut / Stuffed Bajji</h3>
+          <div class="menu-meta">🟢 Veg • 🌶️🌶️🌶️ Spicy</div>
+          <p>Chili fritters stuffed with seasoned filling, sliced and fried for extra crunch.</p>
+          <span>$6</span>
+        </article>
+        <article class="menu-card" data-category="sweets">
+          <img class="menu-img" src="assets/images/maskabun.jpg" alt="Maska Bun">
+          <h3>Maska Bun</h3>
+          <div class="menu-meta">🟢 Veg • 🌶️ None</div>
+          <p>Soft bread roll toasted with butter and lightly sweetened—simple and nostalgic.</p>
+          <span>$4</span>
+        </article>
+        <article class="menu-card" data-category="sweets">
+          <img class="menu-img" src="assets/images/falooda.jpg" alt="Falooda">
+          <h3>Falooda</h3>
+          <div class="menu-meta">🟢 Veg • 🌶️ None</div>
+          <p>Chilled dessert drink with milk, rose flavor, noodles, basil seeds, and ice cream.</p>
+          <span>$5</span>
+        </article>
+      </div> <br><br>
+      <p class="allergen-note">
+        ⚠️ Allergen notice: Our food may contain or come into contact with nuts, dairy, gluten, and eggs.
+        Please inform us of any allergies before ordering.</p>
       </section>
 
       <section id="about" class="section about">
@@ -121,10 +202,20 @@
           <div>
             <p class="eyebrow">Our Story</p>
             <h2>Street food roots, food truck energy.</h2>
-            <p>
-              Share the story of Indian Snack House here. Update the text to describe your
-              inspiration, family recipes, or what makes your truck special.
-            </p>
+              <p>
+                Walking Potato – Indian Snack House was born from a love for classic Indian street food and the hustle of food truck culture.
+                We grew up around roadside stalls, evening snacks, and recipes passed down through bold flavors
+                and fresh ingredients always came first.
+              </p><br>
+              <p>
+                Our goal is simple: bring those same authentic flavors to the streets, made fresh and served fast.
+                From flaky puffs and crispy fritters to tangy chaat and comforting sweets, every item on our menu
+                is inspired by the food we grew up eating—just made accessible for everyone.
+              </p><br>
+              <p>
+                Whether you’re discovering Indian street food for the first time or chasing a nostalgic bite,
+                we’re here to serve food that’s honest, flavorful, and made with pride.
+              </p>
             <div class="stats">
               <div>
                 <h3>10+</h3>
@@ -141,8 +232,7 @@
             </div>
           </div>
           <div class="photo-placeholder">
-            <p>Owner Photo Placeholder</p>
-            <small>Swap with a portrait or team photo.</small>
+            <img class="menu-img" src="assets/images/siva.jpg" alt="siva">
           </div>
         </div>
       </section>
@@ -158,7 +248,7 @@
         <div class="schedule-grid">
           <div class="schedule-card">
             <h3>Monday</h3>
-            <p>City Market • 12pm - 8pm</p>
+            <p>Farmers Market • 12pm - 8pm</p>
           </div>
           <div class="schedule-card">
             <h3>Wednesday</h3>
@@ -166,11 +256,11 @@
           </div>
           <div class="schedule-card">
             <h3>Friday</h3>
-            <p>Riverside Park • 4pm - 9pm</p>
+            <p>Delray Beach • 4pm - 9pm</p>
           </div>
           <div class="schedule-card">
             <h3>Saturday</h3>
-            <p>Food Truck Festival • 1pm - 10pm</p>
+            <p>Fountains at Delray Beach • 1pm - 10pm</p>
           </div>
         </div>
       </section>
@@ -181,13 +271,20 @@
             <p class="eyebrow">Gallery</p>
             <h2>Swap these placeholders with your best shots.</h2>
           </div>
-          <p class="muted">Replace each placeholder with a photo. Keep the grid balanced.</p>
         </div>
         <div class="gallery-grid">
-          <div class="photo-placeholder">Food Photo Placeholder</div>
-          <div class="photo-placeholder">Truck Photo Placeholder</div>
-          <div class="photo-placeholder">Crowd Photo Placeholder</div>
-          <div class="photo-placeholder">Dessert Photo Placeholder</div>
+          <div class="photo-placeholder">
+            <img class="menu-img" src="assets/images/photo1.jpg" alt="truck">
+          </div>
+          <div class="photo-placeholder">
+            <img class="menu-img" src="assets/images/photo2.jpeg" alt="truck">
+          </div>
+          <div class="photo-placeholder">
+            <img class="menu-img" src="assets/images/photo3.jpeg" alt="truck">
+          </div>
+          <div class="photo-placeholder">
+            <img class="menu-img" src="assets/images/photo4.jpeg" alt="truck">
+          </div>
         </div>
       </section>
 
@@ -197,7 +294,7 @@
             <p class="eyebrow">Order Ahead</p>
             <h2>Fast pickup, no waiting.</h2>
             <p>
-              Replace the QR code with your ordering link or delivery app code. You can also link
+              Replace the QR code with ordering link or delivery app code.Link
               directly to an online ordering page.
             </p>
             <div class="order-actions">
@@ -206,8 +303,8 @@
             </div>
           </div>
           <div class="qr-placeholder">
-            <p>QR Code Placeholder</p>
-            <small>Drop your QR image here.</small>
+           <img class="menu-img" src="assets/images/dd.png" alt="dd">
+            <small>Replace with others.</small>
           </div>
         </div>
       </section>
@@ -218,20 +315,20 @@
             <p class="eyebrow">Contact</p>
             <h2>Let’s bring the truck to your event.</h2>
           </div>
-          <p class="muted">Replace the contact details with your real info.</p>
         </div>
         <div class="contact-grid">
           <div class="contact-card">
             <h3>Call or Text</h3>
-            <p>(555) 123-4567</p>
+            <p>(561) 664-8524</p>
           </div>
           <div class="contact-card">
             <h3>Email</h3>
-            <p>hello@indiansnackhouse.com</p>
+            <p>walkingpotato25@gmail.com</p>
           </div>
           <div class="contact-card">
             <h3>Follow Us</h3>
-            <p>@indiansnackhouse</p>
+            <p>@walkingpotato</p>
+            <p>📸 Tag us @walkingpotato to get featured</p>
           </div>
         </div>
       </section>
@@ -251,7 +348,7 @@
         <a href="#order">Order</a>
         <a href="#contact">Contact</a>
       </div>
-      <p class="footer-note">© 2024 Indian Snack House. All rights reserved.</p>
+      <p class="footer-note">© 2026 Walking Potato - Indian Snack House. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
